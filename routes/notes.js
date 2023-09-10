@@ -4,7 +4,7 @@ const { readAndAppend, readFromFile, readAndDelete } = require("../helpers/fsUti
 
 // GET route to retrieve all notes
 note.get("/", (req, res) =>
-  readFromFile("../db/db.json").then((data) => res.json(JSON.parse(data)))
+  readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)))
 );
 
 //POST route to add a new note to the current saved notes
@@ -19,7 +19,7 @@ note.post("/", (req, res) => {
       id: uuidv4(),
     };
 
-    readAndAppend(newNote, '../db/db.json');
+    readAndAppend(newNote, './db/db.json');
 
     const response = {
         status: 'success',
@@ -34,7 +34,7 @@ note.post("/", (req, res) => {
 
 note.delete("/:id", (req, res) => {
   const noteId = req.params.id;
-  readAndDelete(noteId, '../db/db.json');
+  readAndDelete(noteId, './db/db.json');
   res.json(`Note ${noteId} has been deleted`);
 });
 
