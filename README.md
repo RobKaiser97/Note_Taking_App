@@ -39,3 +39,5 @@
   If you have any questions or suggestions about this project, please feel free to contact me:
 - GitHub: [@robkaiser97](http://github.com/robkaiser97)
 - Email: paintballmanrob@gmail.com
+
+Project can be viewed here: ![Live Site](https://calm-crag-09633-c9d9fd03b482.herokuapp.com/notes)
